@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
-<beans>
-	<bean id="triangle" class="springdemo.Triangle" autowire="byName">	
-	</bean>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+  <context:annotation-config/>
+  	
+	<!-- <bean id="triangle" class="springdemo.Triangle" autowire="byName">	
+	</bean> -->
 
 <bean id="pointA" class="springdemo.Point">
 		<property name="x" value="0"></property>
 		<property name="y" value="0"></property>
 </bean>
 
-<bean id="pointB" class="springdemo.Point">
+ <bean id="pointB" class="springdemo.Point">
 		<property name="x" value="20"></property>
 		<property name="y" value="0"></property>
 </bean>
@@ -20,14 +28,12 @@
 </bean>
 
 <bean id="circle" class="springdemo.Circle">
-	<!-- checking if @Required annotation works and how -->
+
 </bean>
 
-<bean id="rectangle" class="springdemo.Rectangle">
+<!-- <bean id="rectangle" class="springdemo.Rectangle">
 	<property name="pointA" ref="pointA"></property>
 	<property name="pointB" ref="pointB"></property>
-</bean>
-
-<bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"/>
+</bean> -->
 
 </beans>
