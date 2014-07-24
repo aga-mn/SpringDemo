@@ -20,11 +20,14 @@
 </bean>
 
 <bean id="circle" class="springdemo.Circle">
-	<property name="center" ref="pointA"/>
+	<!-- checking if @Required annotation works and how -->
 </bean>
+
 <bean id="rectangle" class="springdemo.Rectangle">
-<property name="pointA" ref="pointA"></property>
-<property name="pointB" ref="pointB"></property>
+	<property name="pointA" ref="pointA"></property>
+	<property name="pointB" ref="pointB"></property>
 </bean>
+
+<bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"/>
 
 </beans>
