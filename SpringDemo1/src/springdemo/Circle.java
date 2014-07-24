@@ -4,6 +4,13 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import javax.annotation.Resource;
 
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Service;
+
+@Component
+//@Service
+//@Controller
 public class Circle implements Shape{
 
 	private Point center;
@@ -12,7 +19,7 @@ public class Circle implements Shape{
 		return center;
 	}
 	
-	@Resource(name="pointC")
+	@Resource
 	public void setCenter(Point center) {
 		this.center = center;
 	}
