@@ -11,7 +11,7 @@ public class DrawingApp {
 		
 		//BeanFactory factory=new XmlBeanFactory(new FileSystemResource("spring.xml"));
 		AbstractApplicationContext context=new ClassPathXmlApplicationContext("spring.xml");
-		context.registerShutdownHook();
+		//context.registerShutdownHook();
 		Triangle t =(Triangle) context.getBean("triangle");
 		t.draw();
 		System.out.println("Checking commit");
