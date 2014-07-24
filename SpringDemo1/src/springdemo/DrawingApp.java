@@ -9,7 +9,6 @@ public class DrawingApp {
 		AbstractApplicationContext context=new ClassPathXmlApplicationContext("spring.xml");
 		Shape s = (Shape)context.getBean("circle");
 		s.draw();
-		
-		
+			
 	}
 }
