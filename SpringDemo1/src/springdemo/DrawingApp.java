@@ -14,7 +14,7 @@ public class DrawingApp {
 		//context.registerShutdownHook();
 		Triangle t =(Triangle) context.getBean("triangle");
 		t.draw();
-		System.out.println("Checking commit");
+		
 		
 	}
 }
